@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*::before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+} */
+
+a:hover {
+    color: var(--praimary-color) !important;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --praimary-color: #FFC222;
+    --secondary-color: #00a149;
+    --white-color:#fff;
+    --text-color:#b0b0b0;
+    --black-color:#1E1D23;
+    --primary-font: 'Roboto' , sans-serif;
+    --secondary-font:'Quicksand',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.row {
+    --bs-gutter-x: 0; 
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+/*
+=============================
+    Custom Scrollbar
+=============================
+*/
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+}
+
+
+/*
+=============================
+    Css Design
+=============================
+*/
+
+h1{
+    font-size: 58px;
+    font-weight: 900;
+    color: var(--white-color);
+    text-shadow: 1px 0 6px #000;
+}
+
+h1 span{
+    color: var(--praimary-color);
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    line-height: 45px;
+}
+
+h4{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 7.5px;
+}
+
+h5{
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 7.5px;
+}
+
+p{
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.main-btn{
+    display: inline-block;
+    padding: 10px 21px;
+    line-height: 26px;
+    background-color: var(--praimary-color);
+    border: 2px solid var(--praimary-color);
+    color: var(--black-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 7.5px;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    transition:all .4s ease-out 0s ;
+    -webkit-transition: all .4s ease-out 0s ;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover{
+    background-color: transparent;
+    color: var(--praimary-color);
+}
+
+.wrapper{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+
+
+/*
+=============================
+    Header Design 
+=============================
+*/
+
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition:all 0.3s ease-out ;
+    transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item{
+    padding: 0 10px;
+    transition: all 0.3s linear;
+}
+
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+
+
+.nav-link{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color: var(--praimary-color) !important;
+}
+
+.navigation-wrap .main-btn{
+    padding: 3px 24px;
+    box-shadow: none;
+    margin-left: 10px;
+}
+
+/* Change navbar styling on scroll*/
+
+.navigation-wrap.scroll-on{
+    position: fixed;
+    background-color: var(--white-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 23px 0 rgb(0,0,0,0.09);
+    transition: all 0.15s ease-in-out 0s;
+
+}
+
+.navigation-wrap.scroll-on .nav-link{
+    color: var(--black-color);
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active{
+    color: var(--praimary-color);
+}
+
+
+
+/*
+=============================
+    top-banner Design  
+=============================
+*/
+
+.top-banner{
+    width: 100%;
+    background: url(../images/bg/bg-1.jpg) no-repeat center;
+    background-size: cover ;
+    padding: 253px 0 143px;
+}
+
+.top-banner p{
+    color: var(--white-color);
+}
+
+/*
+=============================
+    Our Menu Design  
+=============================
+*/
+
+.our-menu .card{
+    border: none;
+}
+
+.our-menu .link_category_product{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.our-menu .link_category_product::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dotted var(--secondary-color);
+    z-index: -1;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+    background: var(--praimary-color);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.card:hover .link_category_product::before{
+        transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+.our-menu .cat-title a{
+    text-align: center;
+    font-size: 13px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+.card:hover .cat-title a{
+    color: var(--praimary-color);
+}
+
+/*
+=============================
+    About Design  
+=============================
+*/
+
+.about-section{
+    background-color: var(--black-color);
+}
+
+.about-section .card,
+.about-section .card img{
+    border-radius: 10px;
+}
+
+.about-section .text-sec{
+    padding-left: 32px;
+}
+
+/*
+=============================
+    Food Type Design  
+=============================
+*/
+
+.food-type{
+    padding-top: 52px;
+}
+
+.food-type ul li{
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.food-type ul li::before{
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--praimary-color);
+    font-size: 20px;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 3px;
+    font-weight: 900;
+}
+
+
+/*
+=============================
+    Explore Design  
+=============================
+*/
+
+.explore-food .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+
+}
+
+.explore-food .card img{
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+
+.explore-food .card span{
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--praimary-color);
+    padding-bottom: 16px;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.explore-food p{
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+/*
+==============================
+testimonial section Design
+============================
+ */
+.testimonial-section{
+    background-color: var(--secondary-color);
+}
+.testimonial-section h2{
+    color: var(--white-color);
+}
+.testimonial-section .carousel-item{
+    margin-top: 3rem;
+    padding: 10rem 3.12rem;
+    background-color: var(--black-color);
+    border-radius: 15px;
+    text-align: center;
+}
+.testimonial-section .carousel-caption img{
+    max-width: 5rem;
+    border-radius: 50%;
+    padding: 0.3125rem;
+}
+.testimonial-section .carousel-caption p{
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    font-weight: 300;
+    color: var(--white-color);
+    padding: 0 11% 0.625rem;
+}
+.testimonial-section .carousel-indicators{
+    bottom: -2.8125rem;
+}
+.testimonial-section .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+}
+.testimonial-section .carousel-indicators button.active{
+    opacity: 1;
+}
+
+/*
+==============================
+footer section Design
+============================
+ */
+.footer{
+    background-color: var(--black-color);
+}
+.footer .footer-social a i{
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding: 0.1rem;
+}
+.footer .footer-social a:hover i{
+    color: var(--praimary-color);
+}
+/* Form Control */
+.newsletter .form-control{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--white-color);
+    color: var(--text-color);
+    font-weight: 700;
+}
+.newsletter .main-btn{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0;
+    background-color: var(--white-color);
+    border: 0.1875rem solid var(--white-color);
+    color: var(--black-color);
+    font-weight: 700;
+}
+.newsletter:hover .form-control{
+    border: 0.1875rem solid var(--praimary-color);
+    color: var(--text-color);
+}
+.newsletter:hover .main-btn{
+    background: var(--praimary-color);
+    border: 0.1875rem solid var(--praimary-color);
+}
+.newsletter .form-control:hover,
+.newsletter .form-control:active{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--praimary-color);
+}
